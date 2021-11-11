@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <div id="root"></div>
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+      const paint = (title, des) => (
+        <>
+          <h1>{title}</h1>
+          <h2>{des}</h2>
+        </>
+      );
+      const Paint = ({ title, des }) => {
+        return (
+          <>
+            <h1>{title}</h1>
+            <h4>{des}</h4>
+          </>
+        );
+      };
+      const element = (
+        <>
+          {paint("001", "hi")}
+          {paint("002", "my name is")}
+          {paint("003", "hwany byun")}
+          <Paint title="2021.01.08" des="djWjrnwjWJrn" />
+          <Paint title="2021.05.21" des="dhk sjangkrltlfgek" />
+        </>
+      );
+
+      ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>
