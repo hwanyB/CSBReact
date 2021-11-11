@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <div id="root"></div>
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+      const text = "Hello, world!";
+      const titleName = "title123";
+      const props = { className: titleName, children: text };
+      const customH1 = <h1 {...props} />;
+      const element = customH1;
+      ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>
