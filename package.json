@@ -1,5 +1,5 @@
 {
-  "name": "01-dom-element-211025",
+  "name": "CSBReact",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -9,7 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
+    "url": "git+https://github.com/hwanyB/CSBReact.git",
+    "directory": "1ReactBasic"
   },
   "keywords": [],
   "author": "Ives van Hoorne",
