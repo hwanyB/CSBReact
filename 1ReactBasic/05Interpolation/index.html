@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <div id="root"></div>
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+
+      const Text = ({ text }) => {
+        if (text.charAt(0) === text.charAt(0).toUpperCase()) {
+          return <h1>{text}</h1>;
+        } else {
+          return <h4>{text}</h4>;
+        }
+      };
+      const element = (
+        <>
+          <Text text="Text" />
+          <Text text="text" />
+        </>
+      );
+
+      ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>
