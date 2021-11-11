@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <div id="root"></div>
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+
+      const element = (
+        <React.Fragment>
+          <h1>Hi</h1>
+          <h2>Bye</h2>
+          <h3>Children</h3>
+        </React.Fragment>
+      );
+
+      ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>
