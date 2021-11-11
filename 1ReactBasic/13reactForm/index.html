@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+      const App = () => {
+        const handleSubmit = (event) => {
+          event.preventDefault();
+          alert(
+            `FirstName: ${event.target.elements.fname.value}, LastName: ${event.target.elements.lname.value}
+            Choosed Car: ${event.target.elements.cars.value}`
+          );
+        };
+        return (
+          <>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="fname">First name:</label>
+              <br />
+              <input type="text" name="fname" defaultValue="John" />
+              <br />
+              <label htmlFor="lname">Last name:</label>
+              <br />
+              <input type="text" id="lname" name="lname" defaultValue="Doe" />
+              <br />
+              <label for="cars">Choose a car:</label>
+              <select id="cars" name="cars">
+                <option defaultValue="volvo">Volvo</option>
+                <option defaultValue="saab">Saab</option>
+                <option defaultValue="fiat">Fiat</option>
+                <option defaultValue="audi">Audi</option>
+              </select>
+              <br />
+              <br />
+              <input type="submit" defaultValue="Submit" />
+            </form>
+          </>
+        );
+      };
+
+      ReactDOM.render(<App />, rootElement);
+    </script>
+  </body>
+</html>
